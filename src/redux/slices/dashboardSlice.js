@@ -2,7 +2,7 @@ import {
     createSlice,
     createAsyncThunk,
 } from "@reduxjs/toolkit";
- 
+
 import dashboardService from "@/services/dashboardService";
 
 /*
