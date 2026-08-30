@@ -2,11 +2,22 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import authReducer from "./slices/authSlice";
 import dashboardReducer from "./slices/dashboardSlice"
+import profileReducer from "./slices/profileSlice";
+import projectReducer from "./slices/projectSlice"
+import userReducer from "./slices/userSlice";
+import taskReducer from './slices/taskSlice';
+import memberReducer from "./slices/memberSlice";
 export const store = configureStore({
   reducer: {
 
     auth: authReducer,
-        dashboard: dashboardReducer,
+    dashboard: dashboardReducer,
+     tasks: taskReducer,
+      members: memberReducer,
+
+    profile: profileReducer,
+    projects: projectReducer,
+    users: userReducer,
   },
 });
 

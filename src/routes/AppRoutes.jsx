@@ -13,6 +13,7 @@ import DashboardLayout from "@/layouts/DashboardLayout";
 import ProtectedRoute from "./ProtectedRoute";
 import Register from "@/pages/auth/Register";
 import Kanban from "@/pages/Kanban";
+import ProjectDetailsPage from "@/pages/projects/ProjectDetailsPage";
 
 export default function AppRoutes() {
   return (
@@ -28,6 +29,12 @@ export default function AppRoutes() {
              <Route
                         path="/projects"
                         element={<Projects />}
+                    />
+
+
+                     <Route
+                        path="/projects/:projectId"
+                        element={<ProjectDetailsPage />}
                     />
                   
 
