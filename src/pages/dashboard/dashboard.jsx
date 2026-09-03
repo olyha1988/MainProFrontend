@@ -1,10 +1,10 @@
-// import PageHeader from "@/components/ui/PageHeader";
+
 
 import StatsGrid from "@/components/dashboard/StatsGrid";
 
-// import RecentProjects from "@/components/dashboard/RecentProjects";
+import RecentProjects from "@/components/dashboard/RecentProjects";
 
-// import RecentTasks from "@/components/dashboard/RecentTasks";
+ import RecentTasks from "@/components/dashboard/RecentTasks";
 
 import QuickActions from "@/components/dashboard/QuickActions";
 
@@ -23,13 +23,8 @@ export default function Dashboard() {
 
             <div className="mx-auto  space-y-8">
 
-                {/*
-                |--------------------------------------------------------------------------
-                | Page Header
-                |--------------------------------------------------------------------------
-                */}
+                
 
-                {/* <PageHeader /> */}
 
 
                 {/*
@@ -94,9 +89,9 @@ export default function Dashboard() {
 
                 <section className="grid gap-6 lg:grid-cols-2">
 
-                    {/* <RecentProjects />
+                    <RecentProjects />
 
-                    <RecentTasks /> */}
+                    <RecentTasks /> 
 
                 </section>
 

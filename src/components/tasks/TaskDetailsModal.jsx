@@ -208,26 +208,27 @@ export default function TaskDetailsModal({
         }
 
 
-        fetchTaskActivities(
+        // fetchTaskActivities(
 
-            task._id,
+        //     task._id,
 
-            {
+        //     {
 
-                page: 1,
+        //         page: 1,
 
-                limit: 10,
+        //         limit: 10,
 
-            }
+        //     }
 
-        );
+        // );
 
 
-        return () => {
+
+        /*return () => {
 
             resetActivities();
 
-        };
+        };*/
 
     }, [
 
@@ -375,7 +376,7 @@ export default function TaskDetailsModal({
         }
 
 
-        fetchTaskActivities(
+        /*fetchTaskActivities(
 
             task._id,
 
@@ -389,7 +390,7 @@ export default function TaskDetailsModal({
 
             }
 
-        );
+        );*/
 
     };
 

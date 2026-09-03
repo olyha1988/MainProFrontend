@@ -45,11 +45,11 @@ import EmptyTasks from "@/components/tasks/EmptyTasks";
 
 import ErrorTasks from "@/components/tasks/ErrorTasks";
 
-// import TaskModal from "@/components/tasks/TaskModal";
+import TaskModal from "@/components/tasks/TaskModal";
 
-// import DeleteTaskModal from "@/components/tasks/DeleteTaskModal";
+import DeleteTaskModal from "@/components/tasks/DeleteTaskModal";
 
-// import TaskDetailsModal from "@/components/tasks/TaskDetailsModal";
+import TaskDetailsModal from "@/components/tasks/TaskDetailsModal";
 
 
 export default function Tasks() {
@@ -143,7 +143,7 @@ export default function Tasks() {
 
         setView,
 
-    ] = useState("grid");
+    ] = useState("grid");  // Grid - default
 
 
     const [
@@ -514,7 +514,7 @@ export default function Tasks() {
             |--------------------------------------------------------------------------
             */}
 
-            {
+         {
 
                 !loading &&
 
@@ -568,7 +568,7 @@ export default function Tasks() {
 
                 )
 
-            }
+            } 
 
 
             {/*
@@ -577,7 +577,7 @@ export default function Tasks() {
             |--------------------------------------------------------------------------
             */}
 
-            {/* <TaskDetailsModal
+            <TaskDetailsModal
 
                 open={Boolean(
 
@@ -595,7 +595,7 @@ export default function Tasks() {
 
                 onEdit={handleEdit}
 
-            /> */}
+            />
 
 
             {/*
@@ -604,7 +604,7 @@ export default function Tasks() {
             |--------------------------------------------------------------------------
             */}
 
-            {/* <TaskModal
+            <TaskModal
 
                 open={showModal}
 
@@ -618,7 +618,7 @@ export default function Tasks() {
 
                 }
 
-            /> */}
+            />
 
 
             {/*
@@ -627,7 +627,7 @@ export default function Tasks() {
             |--------------------------------------------------------------------------
             */}
 
-            {/* <DeleteTaskModal
+         <DeleteTaskModal
 
                 open={deleteModal}
 
@@ -641,7 +641,7 @@ export default function Tasks() {
 
                 }
 
-            /> */}
+            /> 
 
         </div>
 
