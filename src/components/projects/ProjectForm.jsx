@@ -36,7 +36,7 @@ import {
 import toast from "react-hot-toast";
 
 
-// import useNotifications from "@/hooks/useNotifications";
+import useNotifications from "@/hooks/useNotifications";
 
 import getErrorMessage from "@/utils/getErrorMessage";
 
