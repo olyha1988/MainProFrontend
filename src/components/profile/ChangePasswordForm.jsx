@@ -33,7 +33,7 @@ import {
 import toast from "react-hot-toast";
 
 
-// import useNotifications from "@/hooks/useNotifications";
+import useNotifications from "@/hooks/useNotifications";
 
 
 import {
@@ -58,11 +58,11 @@ export default function ChangePasswordForm() {
     const dispatch = useDispatch();
 
 
-    // const {
+    const {
 
-    //     notify,
+     notify,
 
-    // } = useNotifications();
+    } = useNotifications();
 
 
     const {
@@ -140,25 +140,25 @@ export default function ChangePasswordForm() {
             ).unwrap();
 
 
-            // notify({
+            notify({
 
-            //     title: "Password Updated",
+                title: "Password Updated",
 
-            //     message: "Your account password was changed successfully.",
+            message: "Your account password was changed successfully.",
 
-            //     type: "success",
+             type: "success",
 
-            //     entityType: "profile",
+             entityType: "profile",
 
-            //     entityId:
+            entityId:
 
-            //         response?._id ||
+             response?._id ||
 
-            //         response?.user?._id ||
+            response?.user?._id ||
 
-            //         null,
+     null,
 
-            // });
+             });
 
 
             reset();

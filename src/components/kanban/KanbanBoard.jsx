@@ -1004,9 +1004,13 @@ const handleDragEnd = async ({
             }
         );
 
-        toast.success(
-            `Task moved to ${destinationStatus}`
-        );
+        notify({
+    title: "Task Moved",
+    message: `${activeTask?.title || "Task"} was moved to ${destinationStatus} successfully.`,
+    type: "success",
+    entityType: "task",
+    entityId: activeTask?._id || activeId,
+});
 
     } catch (error) {
 

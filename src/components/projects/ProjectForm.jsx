@@ -108,11 +108,11 @@ export default function ProjectForm({
     const dispatch = useDispatch();  // redux
 
 
-    // const {
+    const {
 
-    //     notify,
+      notify,
 
-    // } = useNotifications();
+    } = useNotifications();
 
 
     const isEditing =
@@ -233,23 +233,23 @@ export default function ProjectForm({
                 ).unwrap();
 
 
-                // notify({
+                notify({
 
-                //     title: "Project Updated",
+                  title: "Project Updated",
 
-                //     message: `${updatedProject?.name || data.name} was updated successfully.`,
+                 message: `${updatedProject?.name || data.name} was updated successfully.`,
 
-                //     type: "success",
+                type: "success",
 
-                //     entityType: "project",
+                entityType: "project",
 
-                //     entityId:
+                entityId:
 
-                //         updatedProject?._id ||
+                updatedProject?._id ||
 
-                //         project._id,
+                project._id,
 
-                // });
+                });
 
             }
 
@@ -262,21 +262,21 @@ export default function ProjectForm({
                 ).unwrap();
 
 
-                // notify({
+                notify({
 
-                //     title: "Project Created",
+                title: "Project Created",
 
-                //     message: `${createdProject?.name || data.name} was created successfully.`,
+                 message: `${createdProject?.name || data.name} was created successfully.`,
 
-                //     type: "success",
+                type: "success",
 
-                //     entityType: "project",
+                entityType: "project",
 
-                //     entityId:
+                entityId:
 
-                //         createdProject?._id,
+                createdProject?._id,
 
-                // });
+                });
 
             }
 

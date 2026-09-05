@@ -40,7 +40,7 @@ import {
 
 import useProfile from "@/hooks/useProfile";
 
-// import useNotifications from "@/hooks/useNotifications";
+ import useNotifications from "@/hooks/useNotifications";
 
 import getErrorMessage from "@/utils/getErrorMessage";
 
@@ -90,11 +90,11 @@ export default function AvatarUploader({
     } = useProfile();
 
 
-    // const {
+    const {
 
-    //     notify,
+        notify,
 
-    // } = useNotifications();
+    } = useNotifications();
 
 
     const [
@@ -351,23 +351,23 @@ export default function AvatarUploader({
         );
 
 
-        // notify({
+        notify({
 
-        //     title: "Profile Picture Updated",
+           title: "Profile Picture Updated",
 
-        //     message: "Your profile picture was updated successfully.",
+           message: "Your profile picture was updated successfully.",
 
-        //     type: "success",
+            type: "success",
 
-        //     entityType: "profile",
+            entityType: "profile",
 
-        //     entityId:
+           entityId:
 
-        //         updatedProfile?._id ||
+               updatedProfile?._id ||
 
-        //         profile?._id,
+                profile?._id,
 
-        // });
+    });
 
 
         clearSelection();
@@ -431,23 +431,23 @@ export default function AvatarUploader({
         );
 
 
-        // notify({
+        notify({
 
-        //     title: "Profile Picture Removed",
+            title: "Profile Picture Removed",
 
-        //     message: "Your profile picture was removed successfully.",
+             message: "Your profile picture was removed successfully.",
 
-        //     type: "success",
+            type: "success",
 
-        //     entityType: "profile",
+            entityType: "profile",
 
-        //     entityId:
+           entityId:
 
-        //         updatedProfile?._id ||
+                updatedProfile?._id ||
 
-        //         profile?._id,
+               profile?._id,
 
-        // });
+        });
 
 
         clearSelection();

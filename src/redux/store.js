@@ -1,28 +1,53 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import authReducer from "./slices/authSlice";
-import dashboardReducer from "./slices/dashboardSlice"
-import profileReducer from "./slices/profileSlice";
-import projectReducer from "./slices/projectSlice"
-import userReducer from "./slices/userSlice";
+
+import projectReducer from "./slices/projectSlice";
+
 import taskReducer from './slices/taskSlice';
+
 import memberReducer from "./slices/memberSlice";
+
+import dashboardReducer from "./slices/dashboardSlice";
+
+import userReducer from "./slices/userSlice";
+
 import teamReducer from "@/redux/slices/teamSlice";
-// import notificationReducer from "./slices/notificationSlice";
+
+import profileReducer from "@/redux/slices/profileSlice";
+
+import notificationReducer from "./slices/notificationSlice";
+
+import activityReducer from "@/redux/slices/activitySlice";
 
 export const store = configureStore({
-  reducer: {
 
-    auth: authReducer,
-    dashboard: dashboardReducer,
-    tasks: taskReducer,
-    members: memberReducer,
-    team: teamReducer,
-// notifications: notificationReducer,
-    profile: profileReducer,
-    projects: projectReducer,
-    users: userReducer,
-  },
+    reducer: {
+
+        auth: authReducer,
+
+        projects: projectReducer,
+
+        tasks: taskReducer,
+
+        members: memberReducer,
+
+        dashboard: dashboardReducer,
+
+        users: userReducer,
+
+        team: teamReducer,
+
+        profile: profileReducer,
+
+        notifications: notificationReducer,
+
+        activities: activityReducer,
+
+    },
+
 });
+
+// console.log(store)
 
 export default store;

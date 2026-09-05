@@ -14,9 +14,9 @@ import useProjects from "@/hooks/useProjects";
 
 import DeleteProjectModal from "@/components/projects/DeleteProjectModal";
 
-// import EmptyProjects from "@/components/projects/EmptyProjects";
+import EmptyProjects from "@/components/projects/EmptyProjects";
 
-// import ErrorProjects from "@/components/projects/ErrorProjects";
+import ErrorProjects from "@/components/projects/ErrorProjects";
 
 import ProjectGrid from "@/components/projects/ProjectGrid";
 
@@ -291,7 +291,7 @@ const {
             |--------------------------------------------------------------------------
             */}
 
-            {/* {!loading && error && (
+             {!loading && error && (
 
                 <ErrorProjects
 
@@ -305,7 +305,7 @@ const {
 
                 />
 
-            )} */}
+            )} 
 
 
             {/*
@@ -314,7 +314,7 @@ const {
             |--------------------------------------------------------------------------
             */}
 
-            {/* {!loading &&
+            {!loading &&
 
                 !error &&
 
@@ -326,7 +326,7 @@ const {
 
                     />
 
-                )} */}
+                )} 
 
 
             {/*

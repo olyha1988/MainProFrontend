@@ -27,9 +27,9 @@ import TaskPriorityBadge from "@/components/tasks/TaskPriorityBadge";
 
 import TaskStatusBadge from "@/components/tasks/TaskStatusBadge";
 
-// import useActivities from "@/hooks/useActivities";
+import useActivities from "@/hooks/useActivities";
 
-// import ActivityTimeline from "@/components/activity/ActivityTimeline";
+import ActivityTimeline from "@/components/activity/ActivityTimeline";
 
 
 /*
@@ -110,21 +110,21 @@ export default function TaskDetailsModal({
     |--------------------------------------------------------------------------
     */
 
-    // const {
+    const {
 
-    //     activities,
+        activities,
 
-    //     pagination: activityPagination,
+        pagination: activityPagination,
 
-    //     loading: activitiesLoading,
+        loading: activitiesLoading,
 
-    //     error: activitiesError,
+        error: activitiesError,
 
-    //     fetchTaskActivities,
+        fetchTaskActivities,
 
-    //     resetActivities,
+        resetActivities,
 
-    // } = useActivities();
+    } = useActivities();
 
 
     /*
@@ -208,27 +208,26 @@ export default function TaskDetailsModal({
         }
 
 
-        // fetchTaskActivities(
+        fetchTaskActivities(
 
-        //     task._id,
+            task._id,
 
-        //     {
+            {
 
-        //         page: 1,
+                page: 1,
 
-        //         limit: 10,
+                limit: 10,
 
-        //     }
+            }
 
-        // );
+        );
 
 
-
-        /*return () => {
+        return () => {
 
             resetActivities();
 
-        };*/
+        };
 
     }, [
 
@@ -278,34 +277,34 @@ export default function TaskDetailsModal({
     |--------------------------------------------------------------------------
     */
 
-    // const handleActivityRetry = () => {
+    const handleActivityRetry = () => {
 
-    //     if (!task?._id) {
+        if (!task?._id) {
 
-    //         return;
+            return;
 
-    //     }
+        }
 
 
-    //     fetchTaskActivities(
+        fetchTaskActivities(
 
-    //         task._id,
+            task._id,
 
-    //         {
+            {
 
-    //             page:
+                page:
 
-    //                 activityPagination?.page || 1,
+                    activityPagination?.page || 1,
 
-    //             limit:
+                limit:
 
-    //                 activityPagination?.limit || 10,
+                    activityPagination?.limit || 10,
 
-    //         }
+            }
 
-    //     );
+        );
 
-    // };
+    };
 
 
     /*
@@ -314,36 +313,36 @@ export default function TaskDetailsModal({
     |--------------------------------------------------------------------------
     */
 
-    // const handleActivityPageChange = (
+    const handleActivityPageChange = (
 
-    //     page
+        page
 
-    // ) => {
+    ) => {
 
-    //     if (!task?._id) {
+        if (!task?._id) {
 
-    //         return;
+            return;
 
-    //     }
+        }
 
 
-    //     fetchTaskActivities(
+        fetchTaskActivities(
 
-    //         task._id,
+            task._id,
 
-    //         {
+            {
 
-    //             page,
+                page,
 
-    //             limit:
+                limit:
 
-    //                 activityPagination?.limit || 10,
+                    activityPagination?.limit || 10,
 
-    //         }
+            }
 
-    //     );
+        );
 
-    // };
+    };
 
 
     /*
@@ -376,7 +375,7 @@ export default function TaskDetailsModal({
         }
 
 
-        /*fetchTaskActivities(
+        fetchTaskActivities(
 
             task._id,
 
@@ -390,7 +389,7 @@ export default function TaskDetailsModal({
 
             }
 
-        );*/
+        );
 
     };
 
@@ -798,7 +797,7 @@ export default function TaskDetailsModal({
 
                         <section className="border-t border-gray-200 pt-7 dark:border-gray-800">
 
-                            {/* <ActivityTimeline
+                            <ActivityTimeline
 
                                 activities={activities}
 
@@ -818,7 +817,7 @@ export default function TaskDetailsModal({
 
                                 className="rounded-2xl shadow-none dark:bg-gray-900"
 
-                            /> */}
+                            />
 
                         </section>
 

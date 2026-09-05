@@ -46,7 +46,7 @@ import toast from "react-hot-toast";
 
 import useProjects from "@/hooks/useProjects";
 
-// import useNotifications from "@/hooks/useNotifications";
+import useNotifications from "@/hooks/useNotifications";
 
 import ProjectStatusBadge from "@/components/projects/ProjectStatusBadge";
 
@@ -54,9 +54,9 @@ import ProjectModal from "@/components/projects/ProjectModal";
 
 import ProjectMembersModal from "@/components/projects/ProjectMembersModal";
 
-// import useActivities from "@/hooks/useActivities";
+import useActivities from "@/hooks/useActivities";
 
-// import ActivityTimeline from "@/components/activity/ActivityTimeline";
+import ActivityTimeline from "@/components/activity/ActivityTimeline";
 
 const API_BASE_URL =
 
@@ -229,11 +229,11 @@ export default function ProjectDetailsPage() {
     } = useProjects();
 
 
-    // const {
+    const {
 
-    //     notify,
+        notify,
 
-    // } = useNotifications();
+    } = useNotifications();
 
 
         /*
@@ -242,21 +242,21 @@ export default function ProjectDetailsPage() {
     |--------------------------------------------------------------------------
     */
 
-    // const {
+    const {
 
-    //     activities,
+        activities,
 
-    //     pagination: activityPagination,
+        pagination: activityPagination,
 
-    //     loading: activitiesLoading,
+        loading: activitiesLoading,
 
-    //     error: activitiesError,
+        error: activitiesError,
 
-    //     fetchProjectActivities,
+        fetchProjectActivities,
 
-    //     resetActivities,
+        resetActivities,
 
-    // } = useActivities();
+    } = useActivities();
 
 
 
@@ -348,41 +348,41 @@ export default function ProjectDetailsPage() {
     |--------------------------------------------------------------------------
     */
 
-    // useEffect(() => {
+    useEffect(() => {
 
-    //     if (!projectId) {
+        if (!projectId) {
 
-    //         return;
+            return;
 
-    //     }
-
-
-    //     fetchProjectActivities(
-
-    //         projectId,
-
-    //         {
-
-    //             page: 1,
-
-    //             limit: 10,
-
-    //         }
-
-    //     );
+        }
 
 
-    //     return () => {
+        fetchProjectActivities(
 
-    //         resetActivities();
+            projectId,
 
-    //     };
+            {
 
-    // }, [
+                page: 1,
 
-    //     projectId,
+                limit: 10,
 
-    // ]);
+            }
+
+        );
+
+
+        return () => {
+
+            resetActivities();
+
+        };
+
+    }, [
+
+        projectId,
+
+    ]);
 
 
 
@@ -422,19 +422,19 @@ export default function ProjectDetailsPage() {
             );
 
 
-            // notify({
+            notify({
 
-            //     title: "Project Deleted",
+                title: "Project Deleted",
 
-            //     message: `${project.name} was deleted successfully.`,
+                message: `${project.name} was deleted successfully.`,
 
-            //     type: "success",
+                type: "success",
 
-            //     entityType: "project",
+                entityType: "project",
 
-            //     entityId: project._id,
+                entityId: project._id,
 
-            // });
+            });
 
 
             navigate(
@@ -1425,7 +1425,7 @@ if (
                     |--------------------------------------------------------------------------
                     */}
 
-                    {/* <ActivityTimeline
+                    <ActivityTimeline
 
                         activities={activities}
 
@@ -1445,7 +1445,7 @@ if (
 
                         className="rounded-2xl dark:bg-gray-900"
 
-                    /> */}
+                    />
 
                 </div>
 

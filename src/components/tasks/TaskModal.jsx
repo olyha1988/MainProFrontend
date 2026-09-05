@@ -30,7 +30,7 @@ import useTaskForm from "@/hooks/useTaskForm";
 
 import useProjectMembers from "@/hooks/useProjectMembers";
 
-// import useNotifications from "@/hooks/useNotifications";
+ import useNotifications from "@/hooks/useNotifications";
 
 import {
 
@@ -151,11 +151,11 @@ export default function TaskModal({
         useRef(false);
 
 
-    // const {
+    const {
 
-    //     notify,
+         notify,
 
-    // } = useNotifications();
+     } = useNotifications();
 
 
     /*
@@ -656,23 +656,23 @@ export default function TaskModal({
                     ).unwrap();
 
 
-                // notify({
+                 notify({
 
-                //     title: "Task Updated",
+                   title: "Task Updated",
 
-                //     message: `${updatedTask?.title || data.title} was updated successfully.`,
+                   message: `${updatedTask?.title || data.title} was updated successfully.`,
 
-                //     type: "success",
+                type: "success",
 
-                //     entityType: "task",
+                entityType: "task",
 
-                //     entityId:
+                entityId:
 
-                //         updatedTask?._id ||
+                    updatedTask?._id ||
 
-                //         task._id,
+                   task._id,
 
-                // });
+                });
 
             }
 
@@ -687,21 +687,21 @@ export default function TaskModal({
                     ).unwrap();
 
 
-                // notify({
+                 notify({
 
-                //     title: "Task Created",
+                title: "Task Created",
 
-                //     message: `${createdTask?.title || data.title} was created successfully.`,
+                message: `${createdTask?.title || data.title} was created successfully.`,
 
-                //     type: "success",
+                 type: "success",
 
-                //     entityType: "task",
+                entityType: "task",
 
-                //     entityId:
+                entityId:
 
-                //         createdTask?._id,
+                createdTask?._id,
 
-                // });
+                 });
 
             }
 

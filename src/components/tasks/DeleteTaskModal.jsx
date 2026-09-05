@@ -20,7 +20,7 @@ import {
 
 } from "@/redux/slices/taskSlice";
 
-// import useNotifications from "@/hooks/useNotifications";
+ import useNotifications from "@/hooks/useNotifications";
 
 
 export default function DeleteTaskModal({
@@ -38,11 +38,11 @@ export default function DeleteTaskModal({
     const dispatch = useDispatch();
 
 
-    // const {
+    const {
 
-    //     notify,
+    notify,
 
-    // } = useNotifications();
+    } = useNotifications();
 
 
     /*
@@ -84,19 +84,19 @@ export default function DeleteTaskModal({
             ).unwrap();
 
 
-            // notify({
+             notify({
 
-            //     title: "Task Deleted",
+             title: "Task Deleted",
 
-            //     message: `${taskTitle} was deleted successfully.`,
+            message: `${taskTitle} was deleted successfully.`,
 
-            //     type: "success",
+            type: "success",
 
-            //     entityType: "task",
+             entityType: "task",
 
-            //     entityId: task._id,
+            entityId: task._id,
 
-            // });
+            });
 
 
             onClose();
@@ -105,23 +105,23 @@ export default function DeleteTaskModal({
 
         catch (error) {
 
-            // notify({
+            notify({
 
-            //     title: "Delete Failed",
+              title: "Delete Failed",
 
-            //     message:
+             message:
 
-            //         typeof error === "string"
+            typeof error === "string"
 
-            //             ? error
+            ? error
 
-            //             : error?.message ||
+        : error?.message ||
 
-            //               "Failed to delete the task.",
+            "Failed to delete the task.",
 
-            //     type: "error",
+            type: "error",
 
-            // });
+            });
 
         }
 

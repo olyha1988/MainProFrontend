@@ -27,14 +27,14 @@ import useTeam from "@/hooks/useTeam";
 import useMemberProjects from "@/hooks/useMemberProjects";
 import useMemberTasks from "@/hooks/useMemberTasks";
 import useMemberWorkload from "@/hooks/useMemberWorkload";
-// import useActivities from "@/hooks/useActivities";
+import useActivities from "@/hooks/useActivities";
 
 
 import MemberProfileCard from "@/components/team/MemberProfileCard";
 import MemberProjects from "@/components/team/MemberProjects";
 import MemberTasks from "@/components/team/MemberTasks";
 import MemberWorkload from "@/components/team/MemberWorkload";
-// import ActivityTimeline from "@/components/activity/ActivityTimeline";
+import ActivityTimeline from "@/components/activity/ActivityTimeline";
 
 
 export default function MemberProfile() {
@@ -125,21 +125,21 @@ export default function MemberProfile() {
     |--------------------------------------------------------------------------
     */
 
-    // const {
+    const {
 
-    //     activities,
+    activities,
 
-    //     pagination: activityPagination,
+    pagination: activityPagination,
 
-    //     loading: activitiesLoading,
+    loading: activitiesLoading,
 
-    //     error: activitiesError,
+    error: activitiesError,
 
-    //     fetchMemberActivities,
+    fetchMemberActivities,
 
-    //     resetActivities,
+    resetActivities,
 
-    // } = useActivities();
+    } = useActivities();
 
 
     /*
@@ -177,26 +177,26 @@ export default function MemberProfile() {
 
         fetchMemberWorkload(id);
 
-        // fetchMemberActivities(
+        fetchMemberActivities(
 
-        //     id,
+           id,
 
-        //     {
+            {
 
-        //         page: 1,
+                 page: 1,
 
-        //         limit: 10,
+                 limit: 10,
 
-        //     }
+            }
 
-        // );
+         );
 
 
-        // return () => {
+         return () => {
 
-        //     resetActivities();
+            resetActivities();
 
-        // };
+         };
 
     }, [id]);
 
@@ -651,7 +651,7 @@ export default function MemberProfile() {
             |--------------------------------------------------------------------------
             */}
 
-            {/* <ActivityTimeline
+            <ActivityTimeline
 
                 activities={activities}
 
@@ -669,7 +669,7 @@ export default function MemberProfile() {
 
                 description={`Recent actions involving ${member.name}`}
 
-            /> */}
+            /> 
 
         </div>
 

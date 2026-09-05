@@ -30,7 +30,7 @@ import toast from "react-hot-toast";
 
 import useTasks from "@/hooks/useTasks";
 
-// import useNotifications from "@/hooks/useNotifications";
+ import useNotifications from "@/hooks/useNotifications";
 
 import ConfirmDialog from "@/components/common/ConfirmDialog"
 
@@ -264,11 +264,11 @@ export default function TaskAttachments({
     });
 
 
-    // const {
+    const {
 
-    //     notify,
+     notify,
 
-    // } = useNotifications();
+    } = useNotifications();
 
 
     const attachments =
@@ -427,19 +427,18 @@ export default function TaskAttachments({
 
             await onActivityChange?.();
 
-            // notify({
+             notify({
 
-            //     title: "Attachment Uploaded",
+                title: "Attachment Uploaded",
 
-            //     message: `${selectedFile.name} was added to ${task.title || "the task"}.`,
+             message: `${selectedFile.name} was added to ${task.title || "the task"}.`,
 
-            //     type: "success",
+             type: "success",
 
-            //     entityType: "task",
+            entityType: "task",
+entityId: task._id,
 
-            //     entityId: task._id,
-
-            // });
+            });
 
 
             clearSelectedFile();
@@ -576,19 +575,19 @@ const confirmDelete = async () => {
         await onActivityChange?.();
 
 
-        // notify({
+        notify({
 
-        //     title: "Attachment Deleted",
+           title: "Attachment Deleted",
 
-        //     message: `${attachment.fileName || "The attachment"} was removed from ${task.title || "the task"}.`,
+           message: `${attachment.fileName || "The attachment"} was removed from ${task.title || "the task"}.`,
 
-        //     type: "success",
+           type: "success",
 
-        //     entityType: "task",
+           entityType: "task",
 
-        //     entityId: task._id,
+           entityId: task._id,
 
-        // });
+    });
 
 
         setDeleteDialog({

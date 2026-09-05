@@ -31,8 +31,7 @@ import Button from "@/components/common/Button";
 
 import Modal from "@/components/common/Modal";
 
-
-// import useNotifications from "@/hooks/useNotifications";
+ import useNotifications from "@/hooks/useNotifications";
 
 import useProjects from "@/hooks/useProjects";
 
@@ -130,11 +129,11 @@ export default function ProjectMembersModal({
     } = useUsers(); // Users Data Importing 
 
 
-    // const {
+    const {
 
-    //     notify,
+     notify,
 
-    // } = useNotifications();
+    } = useNotifications();
 
 
     /*
@@ -417,25 +416,25 @@ export default function ProjectMembersModal({
                 );
 
 
-            // notify({
+            notify({
 
-            //     title: "Members Added",
+              title: "Members Added",
 
-            //     message:
+            message:
 
-            //         selectedNames.length === 1
+            selectedNames.length === 1
 
-            //             ? `${selectedNames[0]} was added to ${project.name}.`
+            ? `${selectedNames[0]} was added to ${project.name}.`
 
-            //             : `${selectedNames.length} members were added to ${project.name}.`,
+             : `${selectedNames.length} members were added to ${project.name}.`,
 
-            //     type: "success",
+            type: "success",
 
-            //     entityType: "project",
+            entityType: "project",
 
-            //     entityId: project._id,
+            entityId: project._id,
 
-            // });
+            });
 
 
             setSelectedUsers([]);
@@ -514,19 +513,19 @@ export default function ProjectMembersModal({
             );
 
 
-            // notify({
+            notify({
 
-            //     title: "Member Removed",
+             title: "Member Removed",
 
-            //     message: `${member.name} was removed from ${project.name}.`,
+            message: `${member.name} was removed from ${project.name}.`,
 
-            //     type: "success",
+            type: "success",
 
-            //     entityType: "project",
+             entityType: "project",
 
-            //     entityId: project._id,
+            entityId: project._id,
 
-            // });
+            });
 
 
             /*

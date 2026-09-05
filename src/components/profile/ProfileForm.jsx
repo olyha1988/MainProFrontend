@@ -44,7 +44,7 @@ import {
 import toast from "react-hot-toast";
 
 
-// import useNotifications from "@/hooks/useNotifications";
+import useNotifications from "@/hooks/useNotifications";
 
 
 import {
@@ -73,11 +73,11 @@ export default function ProfileForm({
     const dispatch = useDispatch();
 
 
-    // const {
+     const {
 
-    //     notify,
+        notify,
 
-    // } = useNotifications();
+    } = useNotifications();
 
 
     const {
@@ -183,25 +183,25 @@ export default function ProfileForm({
             ).unwrap();
 
 
-            // notify({
+             notify({
 
-            //     title: "Profile Updated",
+                title: "Profile Updated",
 
-            //     message: "Your profile information was updated successfully.",
+                message: "Your profile information was updated successfully.",
 
-            //     type: "success",
+               type: "success",
 
-            //     entityType: "profile",
+                entityType: "profile",
 
-            //     entityId:
+              entityId:
 
-            //         updatedProfile?._id ||
+                  updatedProfile?._id ||
 
-            //         updatedProfile?.user?._id ||
+                   updatedProfile?.user?._id ||
 
-            //         profile?._id,
+                   profile?._id,
 
-            // });
+            });
 
 
             reset({

@@ -20,7 +20,7 @@ import toast from "react-hot-toast";
 
 import Modal from "@/components/common/Modal";
 
-// import useNotifications from "@/hooks/useNotifications";
+ import useNotifications from "@/hooks/useNotifications";
 
 import getErrorMessage from "@/utils/getErrorMessage";
 
@@ -47,11 +47,11 @@ export default function DeleteProjectModal({
     const dispatch = useDispatch(); 
 
 
-    // const {
+     const {
 
-    //     notify,
+       notify,
 
-    // } = useNotifications();
+     } = useNotifications();
 
 
     /*
@@ -100,19 +100,19 @@ export default function DeleteProjectModal({
             ).unwrap();
 
 
-            // notify({
+            notify({
 
-            //     title: "Project Deleted",
+               title: "Project Deleted",
 
-            //     message: `${projectName} was deleted successfully.`,
+              message: `${projectName} was deleted successfully.`,
 
-            //     type: "success",
+              type: "success",
 
-            //     entityType: "project",
+              entityType: "project",
 
-            //     entityId: projectId,
+            entityId: projectId,
 
-            // });
+        });
 
 
             onClose();
