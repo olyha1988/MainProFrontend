@@ -15,6 +15,7 @@ export default function AuthLayout({
     footerLink,
 
     footerLabel,
+footerContent,
 
 }) {
 
@@ -107,6 +108,15 @@ export default function AuthLayout({
                         {children}
 
                     </div>
+
+
+                    {/* footerContent */}
+
+                    <div className="mt-8 border-t border-gray-200 pt-6 text-center dark:border-gray-800">
+  <p className="text-sm text-gray-600 dark:text-gray-400">
+    {footerContent}{" "}
+  </p>
+</div>
 
                     {/* Footer */}
 

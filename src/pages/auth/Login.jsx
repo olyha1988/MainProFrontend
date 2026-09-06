@@ -174,13 +174,29 @@ export default function Login() {
             subtitle="Sign in to continue to your workspace"
 
             footerText="Don't have an account?"
+            
 
             footerLink="/register"
 
             footerLabel="Create account"
-
+             footerContent={
+    <>
+      <br />
+      <span className=" text-blue-500">
+  Email address: h@gmail.com
+  <br />
+  Password: 2026@123
+      </span>
+    </>
+  }
+        
+    
+    
         >
 
+ 
+   
+  
             <form
 
                 onSubmit={handleSubmit(onSubmit)}
