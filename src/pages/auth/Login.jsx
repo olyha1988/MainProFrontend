@@ -183,7 +183,7 @@ export default function Login() {
     <>
       <br />
       <span className=" text-blue-500">
-  Email address: h@gmail.com
+  Email address: 2026@gmail.com
   <br />
   Password: 2026@123
       </span>
